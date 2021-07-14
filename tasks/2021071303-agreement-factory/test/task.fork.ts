@@ -2,7 +2,7 @@ import hre from 'hardhat'
 import { expect } from 'chai'
 import { Contract } from 'ethers'
 import { SignerWithAddress } from '@nomiclabs/hardhat-ethers/dist/src/signer-with-address'
-import { fp, getForkedNetwork, assertEvent, getSigners, ZERO_ADDRESS } from '@octopus-fi/v1-helpers'
+import { fp, getForkedNetwork, assertEvent, getSigners, ZERO_ADDRESS } from '@mimic-fi/v1-helpers'
 
 import Task from '../../../src/task'
 

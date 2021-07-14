@@ -1,5 +1,5 @@
 import { expect } from 'chai'
-import { fp } from '@octopus-fi/v1-helpers'
+import { fp } from '@mimic-fi/v1-helpers'
 
 import Task from '../../../src/task'
 import { Output } from '../../../src/types'

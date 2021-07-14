@@ -4,7 +4,7 @@ import { BigNumber, Contract } from 'ethers'
 import { SignerWithAddress } from '@nomiclabs/hardhat-ethers/signers'
 import { BuildInfo, CompilerOutputContract, HardhatRuntimeEnvironment } from 'hardhat/types'
 
-import { deploy, instanceAt } from '@octopus-fi/v1-helpers'
+import { deploy, instanceAt } from '@mimic-fi/v1-helpers'
 
 import logger from './logger'
 import Verifier from './verifier'

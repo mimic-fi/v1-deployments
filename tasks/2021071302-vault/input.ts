@@ -1,4 +1,4 @@
-import { BigNumberish, fp } from '@octopus-fi/v1-helpers'
+import { BigNumberish, fp } from '@mimic-fi/v1-helpers'
 
 import Task from '../../src/task'
 

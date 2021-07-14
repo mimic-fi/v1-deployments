@@ -1,7 +1,7 @@
 import path from 'path'
 import '@nomiclabs/hardhat-ethers'
 import '@nomiclabs/hardhat-waffle'
-import '@octopus-fi/v1-helpers/tests'
+import '@mimic-fi/v1-helpers/tests'
 import 'hardhat-local-networks-config-plugin'
 
 import { homedir } from 'os'
@@ -23,5 +23,5 @@ task('deploy', 'Run deployment task')
   })
 
 export default {
-  localNetworksConfig: path.join(homedir(), '/.hardhat/networks.octopus.json'),
+  localNetworksConfig: path.join(homedir(), '/.hardhat/networks.mimic.json'),
 }
