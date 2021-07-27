@@ -11,6 +11,11 @@ export type VaultDeployment = {
 }
 
 export default {
+  localhost: {
+    swapConnector,
+    protocolFee: fp(0.0002), // 2%
+    whitelistedStrategies: [],
+  },
   rinkeby: {
     swapConnector,
     protocolFee: fp(0.0002), // 2%
