@@ -55,7 +55,7 @@ export default class Task {
 
   async instanceAt(name: string, address: string): Promise<Contract> {
     const artifact = this.artifact(name)
-    return instanceAt(artifact.abi, address)
+    return instanceAt(artifact, address)
   }
 
   async deploy(name: string, args: Array<Param> = [], from?: SignerWithAddress): Promise<Contract> {
