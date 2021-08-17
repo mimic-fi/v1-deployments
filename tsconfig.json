@@ -6,7 +6,20 @@
     "rootDir": ".",
     "outDir": "dist",
     "esModuleInterop": true,
-    "strict": true
+    "strict": true,
+    "resolveJsonModule": true
   },
-  "exclude": ["tasks"]
+  "include": [
+    "./src",
+    "./index.ts",
+    "./tasks/**/output/*.json"
+  ],
+  "exclude": [
+    "./tasks/**/test",
+    "./tasks/**/build-info/*.json",
+    "./tasks/**/output/test.json"
+  ],
+  "files": [
+    "./hardhat.config.ts"
+  ]
 }
