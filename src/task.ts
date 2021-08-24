@@ -59,9 +59,9 @@ export default class Task {
   }
 
   async deployedInstance(name: string): Promise<Contract> {
-    const address = this.output()[name];
-    if (!address) throw Error(`Could not find deployed address for ${name}`);
-    return this.instanceAt(name, address);
+    const address = this.output()[name]
+    if (!address) throw Error(`Could not find deployed address for ${name}`)
+    return this.instanceAt(name, address)
   }
 
   async deploy(name: string, args: Array<Param> = [], from?: SignerWithAddress): Promise<Contract> {
