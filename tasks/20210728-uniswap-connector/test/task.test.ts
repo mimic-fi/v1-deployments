@@ -4,7 +4,7 @@ import Task from '../../../src/task'
 import { Output } from '../../../src/types'
 
 describe('UniswapConnector', function () {
-  const task = Task.forTest('20210728-uniswap-connector', 'mainnet')
+  const task = Task.forTest('20210728-uniswap-connector', 'rinkeby')
 
   context('with no previous deploy', () => {
     const itDeploysSwapConnector = (force: boolean) => {
