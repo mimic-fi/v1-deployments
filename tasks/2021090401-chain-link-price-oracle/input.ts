@@ -24,4 +24,16 @@ export default {
       '0xdCA36F27cbC4E38aE16C4E9f99D39b42337F6dcf', // USDC/ETH
     ],
   },
+  kovan: {
+    tokens: [
+      '0x4f96fe3b7a6cf9725f59d353f723c1bdb64ca6aa', // DAI
+      '0xb7a4f3e9097c08da09517b5ab877f7a917224ede', // USDC
+      '0x07de306ff27a2b630b1141956844eb1552b956b5', // USDT
+    ],
+    ethPriceFeeds: [
+      '0x22B58f1EbEDfCA50feF632bD73368b2FdA96D541', // DAI/ETH
+      '0x64EaC61A2DFda2c3Fa04eED49AA33D021AeC8838', // USDC/ETH
+      '0x0bF499444525a23E7Bb61997539725cA2e928138', // USDT/ETH
+    ],
+  },
 }
