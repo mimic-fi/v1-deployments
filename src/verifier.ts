@@ -114,6 +114,7 @@ export default class Verifier {
     let response: Response
     try {
       response = await fetch(url, requestDetails)
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       throw Error(`Failed to send verification request. Reason: ${error?.message}`)
     }
