@@ -1,7 +1,7 @@
 import path from 'path'
 import '@nomiclabs/hardhat-ethers'
 import '@nomiclabs/hardhat-waffle'
-import '@mimic-fi/v1-helpers/tests'
+import '@mimic-fi/v1-helpers/dist/tests'
 import 'hardhat-local-networks-config-plugin'
 
 import { homedir } from 'os'
