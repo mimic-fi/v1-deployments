@@ -114,8 +114,8 @@ export default class Verifier {
     let response: Response
     try {
       response = await fetch(url, requestDetails)
-    } catch (error) {
-      throw Error(`Failed to send verification request. Reason: ${error.message}`)
+    } catch (error: any) {
+      throw Error(`Failed to send verification request. Reason: ${error?.message}`)
     }
 
     if (!response.ok) {
