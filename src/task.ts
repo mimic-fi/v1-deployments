@@ -81,17 +81,17 @@ export default class Task {
     }
   }
 
-  async deployAndVerify(name: string, args: Array<Param> = [], from?: SignerWithAddress, force?: boolean): Promise<Contract> {
+  async deployAndVerify(name: string, args: Array<Param> = [], from?: SignerWithAddress, force?: boolean, key = name): Promise<Contract> {
     const output = this.output({ ensure: false })
-    if (force || !output[name]) {
+    if (force || !output[key]) {
       const instance = await this.deploy(name, args, from)
-      this.save({ [name]: instance })
+      this.save({ [key]: instance })
       await this.verify(name, instance.address, args)
       return instance
     } else {
-      logger.info(`${name} already deployed at ${output[name]}`)
-      await this.verify(name, output[name], args)
-      return this.instanceAt(name, output[name])
+      logger.info(`${name} already deployed at ${output[key]}`)
+      await this.verify(name, output[key], args)
+      return this.instanceAt(name, output[key])
     }
   }
 
