@@ -14,6 +14,7 @@ This repository contains all the official deployments that contributes to the Mi
 | [`2021090902-agreement-factory`](./tasks/2021090902-agreement-factory/output) | Agreements factory |
 | [`2021090903-strategy-compound`](./tasks/2021090903-strategy-compound/output) | Compound strategies |
 | [`2021090904-strategy-buy-and-hold`](./tasks/2021090904-strategy-buy-and-hold/output) | Buy & Hold strategies |
+| [`2021090905-strategy-balancer-weighted`](./tasks/2021090904-strategy-balancer-weighted/output) | Balancer weighted strategies |
 
 ## New deployments
 
