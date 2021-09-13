@@ -40,14 +40,14 @@ export default {
     strategies: [
       {
         name: 'DAI',
-        slippage: fp(0.01),
+        slippage: fp(0.99),
         token: '0x4f96fe3b7a6cf9725f59d353f723c1bdb64ca6aa',
         ctoken: '0xF0d0EB522cfa50B716B3b1604C4F0fA6f04376AD',
         metadata: 'https://coinmarketcap.com/currencies/compound-dai',
       },
       {
         name: 'USDC',
-        slippage: fp(0.01),
+        slippage: fp(0.99),
         token: '0xb7a4f3e9097c08da09517b5ab877f7a917224ede',
         ctoken: '0x4a92E71227D294F041BD82dd8f78591B75140d63',
         metadata: 'https://coinmarketcap.com/currencies/compound-usd-coin/',
