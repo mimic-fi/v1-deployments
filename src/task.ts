@@ -19,6 +19,10 @@ export default class Task {
   _verifier?: Verifier
   _outputFile?: string
 
+  static all(hre: HardhatRuntimeEnvironment, verifier?: Verifier): Task[] {
+    return fs.readdirSync(TASKS_DIRECTORY).map((taskId) => new this(taskId, hre.network.name, verifier))
+  }
+
   static fromHRE(id: string, hre: HardhatRuntimeEnvironment, verifier?: Verifier): Task {
     return new this(id, hre.network.name, verifier)
   }

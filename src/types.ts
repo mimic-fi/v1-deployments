@@ -50,3 +50,11 @@ export type Artifact = {
     }
   }
 }
+
+export type Metadata = {
+  version: string
+  type: 'stable' | 'token'
+  title: string
+  description: string
+  instruments: string[]
+}
