@@ -22,6 +22,19 @@ task('deploy', 'Run deployment task')
     await Task.fromHRE(args.id, hre, verifier).run(args)
   })
 
+task('deploy:all', 'Run all deployment tasks')
+  .addFlag('force', 'Ignore previous deployments')
+  .addOptionalParam('key', 'Etherscan API key to verify contracts')
+  .setAction(async (args: { force?: boolean; key?: string; verbose?: boolean }, hre: HardhatRuntimeEnvironment) => {
+    Logger.setDefaults(false, args.verbose || false)
+    const verifier = args.key ? new Verifier(hre.network, args.key) : undefined
+    const tasks = Task.all(hre, verifier)
+    for (const task of tasks) {
+      await task.run(args)
+      await new Promise((resolve) => setTimeout(resolve, 1000))
+    }
+  })
+
 export default {
   localNetworksConfig: path.join(homedir(), '/.hardhat/networks.mimic.json'),
 }
