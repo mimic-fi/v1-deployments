@@ -41,6 +41,8 @@ export default {
       '0xb7a4f3e9097c08da09517b5ab877f7a917224ede', // USDC
       '0x07de306ff27a2b630b1141956844eb1552b956b5', // USDT
       '0xd0A1E359811322d97991E03f863a0C30C2cF029C', // WETH
+      '0x04DF6e4121c27713ED22341E7c7Df330F56f289B', // DAI2
+      '0xc2569dd7d0fd715B054fBf16E75B001E5c0C1115', // USDC2
     ],
     whitelistedStrategies: [],
   },
