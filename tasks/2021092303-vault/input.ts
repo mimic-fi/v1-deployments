@@ -46,6 +46,8 @@ export default {
       '0xd0A1E359811322d97991E03f863a0C30C2cF029C', // WETH (compound)
       '0x04DF6e4121c27713ED22341E7c7Df330F56f289B', // DAI (balancer)
       '0xc2569dd7d0fd715B054fBf16E75B001E5c0C1115', // USDC (balancer)
+      '0xcC08220af469192C53295fDd34CFb8DF29aa17AB', // USDT (balancer)
+      '0xdFCeA9088c8A88A76FF74892C1457C17dfeef9C1', // WETH (balancer)
     ],
     whitelistedStrategies: [],
   },
