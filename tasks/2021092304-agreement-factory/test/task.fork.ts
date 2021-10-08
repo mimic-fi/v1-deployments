@@ -1,8 +1,8 @@
-import hre from 'hardhat'
+import { assertEvent, fp, getForkedNetwork, getSigners, ZERO_ADDRESS } from '@mimic-fi/v1-helpers'
+import { SignerWithAddress } from '@nomiclabs/hardhat-ethers/dist/src/signer-with-address'
 import { expect } from 'chai'
 import { Contract } from 'ethers'
-import { SignerWithAddress } from '@nomiclabs/hardhat-ethers/dist/src/signer-with-address'
-import { fp, getForkedNetwork, assertEvent, getSigners, ZERO_ADDRESS } from '@mimic-fi/v1-helpers'
+import hre from 'hardhat'
 
 import Task from '../../../src/task'
 

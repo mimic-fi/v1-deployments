@@ -1,14 +1,14 @@
-import fetch, { Response } from 'node-fetch'
-import { BuildInfo, CompilerInput, Network } from 'hardhat/types'
-import { getLongVersion } from '@nomiclabs/hardhat-etherscan/dist/src/solc/version'
 import { encodeArguments } from '@nomiclabs/hardhat-etherscan/dist/src/ABIEncoder'
 import EtherscanResponse, { delay, getVerificationStatus } from '@nomiclabs/hardhat-etherscan/dist/src/etherscan/EtherscanService'
-import { toVerifyRequest, toCheckStatusRequest, EtherscanVerifyRequest } from '@nomiclabs/hardhat-etherscan/dist/src/etherscan/EtherscanVerifyContractRequest'
+import { EtherscanVerifyRequest, toCheckStatusRequest, toVerifyRequest } from '@nomiclabs/hardhat-etherscan/dist/src/etherscan/EtherscanVerifyContractRequest'
 import { EtherscanURLs, getEtherscanEndpoints, retrieveContractBytecode } from '@nomiclabs/hardhat-etherscan/dist/src/network/prober'
 import { Bytecode, ContractInformation, extractMatchingContractInformation } from '@nomiclabs/hardhat-etherscan/dist/src/solc/bytecode'
+import { getLongVersion } from '@nomiclabs/hardhat-etherscan/dist/src/solc/version'
+import { BuildInfo, CompilerInput, Network } from 'hardhat/types'
+import fetch, { Response } from 'node-fetch'
 
-import Task from './task'
 import logger from './logger'
+import Task from './task'
 
 const MAX_VERIFICATION_INTENTS = 3
 

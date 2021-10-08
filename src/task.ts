@@ -1,15 +1,13 @@
-import fs from 'fs'
-import path, { extname } from 'path'
-import { BigNumber, Contract } from 'ethers'
-import { SignerWithAddress } from '@nomiclabs/hardhat-ethers/signers'
-import { BuildInfo, CompilerOutputContract, HardhatRuntimeEnvironment } from 'hardhat/types'
-
 import { deploy, instanceAt } from '@mimic-fi/v1-helpers'
+import { SignerWithAddress } from '@nomiclabs/hardhat-ethers/signers'
+import { BigNumber, Contract } from 'ethers'
+import fs from 'fs'
+import { BuildInfo, CompilerOutputContract, HardhatRuntimeEnvironment } from 'hardhat/types'
+import path, { extname } from 'path'
 
 import logger from './logger'
+import { Artifact, Input, Network, NETWORKS, Output, Param, RawInputKeyValue, RawOutput, TaskRunOptions } from './types'
 import Verifier from './verifier'
-
-import { NETWORKS, Network, Artifact, Input, Output, Param, RawInputKeyValue, RawOutput, TaskRunOptions } from './types'
 
 const TASKS_DIRECTORY = path.resolve(__dirname, '../tasks')
 

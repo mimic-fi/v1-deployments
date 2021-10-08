@@ -14,6 +14,8 @@ export type VaultDeployment = {
   whitelistedStrategies: Array<string>
 }
 
+/* eslint-disable no-secrets/no-secrets */
+
 export default {
   localhost: {
     UniswapConnector,
