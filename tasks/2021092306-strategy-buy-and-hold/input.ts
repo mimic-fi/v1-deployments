@@ -10,6 +10,8 @@ export type BuyAndHoldStrategyDeployment = {
   strategies: Array<{ name: string; token: string; holdToken: string; slippage: BigNumberish; metadata: string | Metadata }>
 }
 
+/* eslint-disable no-secrets/no-secrets */
+
 export default {
   rinkeby: {
     Vault,

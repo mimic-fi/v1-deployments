@@ -1,16 +1,16 @@
-import path from 'path'
 import '@nomiclabs/hardhat-ethers'
 import '@nomiclabs/hardhat-waffle'
 import '@mimic-fi/v1-helpers/dist/tests'
 import 'hardhat-local-networks-config-plugin'
 
-import { homedir } from 'os'
 import { task } from 'hardhat/config'
 import { HardhatRuntimeEnvironment } from 'hardhat/types'
+import { homedir } from 'os'
+import path from 'path'
 
+import { Logger } from './src/logger'
 import Task from './src/task'
 import Verifier from './src/verifier'
-import { Logger } from './src/logger'
 
 task('deploy', 'Run deployment task')
   .addParam('id', 'Deployment task ID')

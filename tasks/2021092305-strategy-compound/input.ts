@@ -12,6 +12,8 @@ export type CompoundStrategyDeployment = {
   strategies: Array<{ name: string; token: string; ctoken: string; slippage: BigNumberish; metadata: string | Metadata }>
 }
 
+/* eslint-disable no-secrets/no-secrets */
+
 export default {
   rinkeby: {
     Vault,

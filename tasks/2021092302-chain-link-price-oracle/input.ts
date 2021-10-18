@@ -3,6 +3,8 @@ export type ChainLinkPriceOracleDeployment = {
   ethPriceFeeds: Array<string>
 }
 
+/* eslint-disable no-secrets/no-secrets */
+
 export default {
   localhost: {
     tokens: [

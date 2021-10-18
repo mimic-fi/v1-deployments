@@ -10,6 +10,8 @@ export type BalancerWeightedStrategyDeployment = {
   strategies: Array<{ name: string; token: string; balancerVault: string; poolId: string; tokenIndex: number; balToken: string; slippage: BigNumberish; metadata: string | Metadata }>
 }
 
+/* eslint-disable no-secrets/no-secrets */
+
 export default {
   kovan: {
     Vault,

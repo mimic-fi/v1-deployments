@@ -1,5 +1,5 @@
-import hre from 'hardhat'
 import { expect } from 'chai'
+import hre from 'hardhat'
 
 import Task from '../../../src/task'
 

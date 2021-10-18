@@ -1,6 +1,6 @@
-import { Contract, BigNumber } from 'ethers'
-import { CompilerOutputBytecode } from 'hardhat/types'
 import { SignerWithAddress } from '@nomiclabs/hardhat-ethers/dist/src/signer-with-address'
+import { BigNumber, Contract } from 'ethers'
+import { CompilerOutputBytecode } from 'hardhat/types'
 
 import Task from './task'
 
@@ -23,7 +23,7 @@ export type Input = {
 }
 
 export type RawInputByNetwork = {
-  [key in Network]: RawInputKeyValue
+  [key: Network]: RawInputKeyValue
 }
 
 export type RawInputKeyValue = {
