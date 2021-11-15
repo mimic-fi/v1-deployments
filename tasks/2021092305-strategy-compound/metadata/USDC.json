@@ -1,7 +1,0 @@
-{
-  "version": "0.0.1",
-  "type": "stable",
-  "title": "Compound USDC",
-  "description": "Invest USDC in Compound earning fees with cUSDC",
-  "instruments": ["usdc", "cusdc"]
-}

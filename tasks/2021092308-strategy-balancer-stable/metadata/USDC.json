@@ -1,7 +1,0 @@
-{
-  "version": "0.0.1",
-  "type": "stable",
-  "title": "USDC-STABLE",
-  "description": "Provide liquidity in Balancer STABAL3 pool earning fees and mining",
-  "instruments": ["dai", "usdc", "usdt", "balancer"]
-}

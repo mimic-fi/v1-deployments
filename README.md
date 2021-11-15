@@ -8,14 +8,14 @@ This repository contains all the official deployments that contributes to the Mi
 
 | ID                                                                                              | Component                    |
 | ----------------------------------------------------------------------------------------------- | ---------------------------- |
-| [`2021092301-uniswap-connector`](./tasks/2021092301-uniswap-connector/output)                   | Uniswap V2 connector         |
-| [`2021092302-chain-link-price-oracle`](./tasks/2021092302-chain-link-price-oracle/output)       | Chainlink V3 price oracle    |
-| [`2021092303-vault`](./tasks/2021092303-vault/output)                                           | Mimic Vault                  |
-| [`2021092304-agreement-factory`](./tasks/2021092304-agreement-factory/output)                   | Agreements factory           |
-| [`2021092305-strategy-compound`](./tasks/2021092305-strategy-compound/output)                   | Compound strategies          |
-| [`2021092306-strategy-buy-and-hold`](./tasks/2021092306-strategy-buy-and-hold/output)           | Buy & Hold strategies        |
-| [`2021092307-strategy-balancer-weighted`](./tasks/2021092307-strategy-balancer-weighted/output) | Balancer weighted strategies |
-| [`2021092308-strategy-balancer-stable`](./tasks/2021092308-strategy-balancer-stable/output)     | Balancer stable strategies   |
+| [`2021111501-uniswap-connector`](./tasks/2021111501-uniswap-connector/output)                   | Uniswap V2 connector         |
+| [`2021111502-chain-link-price-oracle`](./tasks/2021111502-chain-link-price-oracle/output)       | Chainlink V3 price oracle    |
+| [`2021111503-vault`](./tasks/2021111503-vault/output)                                           | Mimic Vault                  |
+| [`2021111504-agreement-factory`](./tasks/2021111504-agreement-factory/output)                   | Agreements factory           |
+| [`2021111505-strategy-compound`](./tasks/2021111505-strategy-compound/output)                   | Compound strategies          |
+| [`2021111506-strategy-buy-and-hold`](./tasks/2021111506-strategy-buy-and-hold/output)           | Buy & Hold strategies        |
+| [`2021111507-strategy-balancer-weighted`](./tasks/2021111507-strategy-balancer-weighted/output) | Balancer weighted strategies |
+| [`2021111508-strategy-balancer-stable`](./tasks/2021111508-strategy-balancer-stable/output)     | Balancer stable strategies   |
 
 ## New deployments
 
