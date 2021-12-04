@@ -1,0 +1,8 @@
+{
+  "version": "0.0.1",
+  "type": "token",
+  "title": "USDC-WETH",
+  "description": "Buy WETH with USDC",
+  "instruments": ["usdc", "weth"],
+  "subgraph": "/mimic-fi/buyandhold-strategy-kovan"
+}

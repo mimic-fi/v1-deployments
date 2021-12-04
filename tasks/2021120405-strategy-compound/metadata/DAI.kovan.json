@@ -1,0 +1,8 @@
+{
+  "version": "0.0.1",
+  "type": "stable",
+  "title": "Compound DAI",
+  "description": "Invest DAI in Compound earning fees with cDAI",
+  "instruments": ["dai", "cdai"],
+  "subgraph": "/mimic-fi/compound-strategy-kovan"
+}

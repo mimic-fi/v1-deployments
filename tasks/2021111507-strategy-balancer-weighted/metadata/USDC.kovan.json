@@ -1,8 +1,0 @@
-{
-  "version": "0.0.1",
-  "type": "token",
-  "title": "USDC-WETH 50/50",
-  "description": "Provide liquidity in Balancer USDC-WETH 50/50 pool earning fees and mining",
-  "instruments": ["usdc", "weth", "balancer"],
-  "subgraph": "/mimic-fi/balancer-weighted-strategy-kovan"
-}
