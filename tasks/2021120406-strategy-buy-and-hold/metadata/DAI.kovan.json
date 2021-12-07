@@ -3,6 +3,5 @@
   "type": "token",
   "title": "DAI-WETH",
   "description": "Buy WETH with DAI",
-  "instruments": ["dai", "weth"],
-  "subgraph": "/mimic-fi/buyandhold-strategy-kovan"
+  "instruments": ["dai", "weth"]
 }

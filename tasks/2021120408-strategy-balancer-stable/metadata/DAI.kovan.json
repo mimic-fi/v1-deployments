@@ -3,6 +3,5 @@
   "type": "stable",
   "title": "DAI-STABLE",
   "description": "Provide liquidity in Balancer STABAL3 pool earning fees and mining",
-  "instruments": ["dai", "usdc", "usdt", "balancer"],
-  "subgraph": "/mimic-fi/balancer-stable-strategy-kovan"
+  "instruments": ["dai", "usdc", "usdt", "balancer"]
 }
