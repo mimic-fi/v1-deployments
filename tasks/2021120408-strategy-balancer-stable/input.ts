@@ -34,4 +34,17 @@ export default {
       },
     ],
   },
+  mainnet: {
+    Vault,
+    balancerVault: '0xBA12222222228d8Ba445958a75a0704d566BF2C8',
+    strategies: [
+      {
+        name: 'USDC',
+        token: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',
+        poolId: '0x06df3b2bbb68adc8b0e302443692037ed9f91b42000000000000000000000063',
+        slippage: fp(0.01),
+        metadata: 'ipfs:QmWpmKtVUvCZoHXwH3G249kPsJ3Pj542ApYJdMzc2aa3A8',
+      },
+    ],
+  },
 }

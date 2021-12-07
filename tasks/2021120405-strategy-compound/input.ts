@@ -54,4 +54,17 @@ export default {
       },
     ],
   },
+  mainnet: {
+    Vault,
+    comptroller: '0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b',
+    strategies: [
+      {
+        name: 'DAI',
+        slippage: fp(0.05),
+        token: '0x6B175474E89094C44Da98b954EedeAC495271d0F',
+        ctoken: '0x5d3a536e4d6dbd6114cc1ead35777bab948e3643',
+        metadata: 'ipfs:QmSbzUwqiNQuBefs2omKkCLi7eyv7RwnaJWEYrQ7brFRqr',
+      },
+    ],
+  },
 }

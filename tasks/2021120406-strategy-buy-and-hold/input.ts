@@ -51,4 +51,8 @@ export default {
       },
     ],
   },
+  mainnet: {
+    Vault,
+    strategies: [],
+  },
 }

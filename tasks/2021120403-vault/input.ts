@@ -20,7 +20,8 @@ export default {
   localhost: {
     UniswapConnector,
     ChainLinkPriceOracle,
-    protocolFee: fp(0.0002), // 2%
+    maxSlippage: fp(0.2), // 20%
+    protocolFee: fp(0.0002), // 0.02%
     whitelistedTokens: [],
     whitelistedStrategies: [],
   },
@@ -28,7 +29,7 @@ export default {
     UniswapConnector,
     ChainLinkPriceOracle,
     maxSlippage: fp(0.2), // 20%
-    protocolFee: fp(0.0002), // 2%
+    protocolFee: fp(0.0002), // 0.02%
     whitelistedTokens: [
       '0x5592ec0cfb4dbc12d3ab100b257153436a1f0fea', // DAI (compound)
       '0x4dbcdf9b62e891a7cec5a2568c3f4faf9e8abe2b', // USDC (compound)
@@ -40,7 +41,7 @@ export default {
     UniswapConnector,
     ChainLinkPriceOracle,
     maxSlippage: fp(0.2), // 20%
-    protocolFee: fp(0.0002), // 2%
+    protocolFee: fp(0.0002), // 0.02%
     whitelistedTokens: [
       '0x4f96fe3b7a6cf9725f59d353f723c1bdb64ca6aa', // DAI (compound)
       '0xb7a4f3e9097c08da09517b5ab877f7a917224ede', // USDC (compound)
@@ -56,9 +57,15 @@ export default {
   mainnet: {
     UniswapConnector,
     ChainLinkPriceOracle,
-    maxSlippage: fp(0.02), // 2%
-    protocolFee: fp(0.0005), // 5%
-    whitelistedTokens: [],
+    maxSlippage: fp(0.2), // 20%
+    protocolFee: fp(0), // 0%
+    whitelistedTokens: [
+      '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599', // WBTC
+      '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', // WETH
+      '0x6B175474E89094C44Da98b954EedeAC495271d0F', // DAI
+      '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48', // USDC
+      '0xdAC17F958D2ee523a2206206994597C13D831ec7', // USDT
+    ],
     whitelistedStrategies: [],
   },
 }

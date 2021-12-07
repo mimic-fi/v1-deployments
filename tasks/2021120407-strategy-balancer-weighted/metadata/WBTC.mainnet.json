@@ -1,0 +1,7 @@
+{
+  "version": "0.0.1",
+  "type": "token",
+  "title": "WETH-WBTC 50/50",
+  "description": "Provide liquidity in Balancer WETH-WBTC 50/50 pool earning fees and mining",
+  "instruments": ["weth", "wbtc", "balancer"]
+}
