@@ -38,13 +38,6 @@ export default {
         slippage: fp(0.01),
         metadata: 'ipfs:QmbDYoPZsgF3yPRSsuZDThjZJ2oe3Kp1n4i95Sry6YAFhZ',
       },
-      {
-        name: 'wstETH',
-        token: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
-        poolId: '0x32296969ef14eb0c6d29669c550d4a0449130230000200000000000000000080',
-        slippage: fp(0.01),
-        metadata: 'ipfs:QmSw4sSEgJYXWmBRso1HEsVQfB22Mim6MD3huzkhBvx6VB',
-      },
     ],
   },
 }
