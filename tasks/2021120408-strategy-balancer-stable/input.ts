@@ -54,4 +54,17 @@ export default {
       },
     ],
   },
+  polygon: {
+    Vault,
+    balancerVault: '0xBA12222222228d8Ba445958a75a0704d566BF2C8',
+    strategies: [
+      {
+        name: 'USDC',
+        token: '0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174',
+        poolId: '0x0d34e5dd4d8f043557145598e4e2dc286b35fd4f000000000000000000000068',
+        slippage: fp(0.01),
+        metadata: 'ipfs:QmWpmKtVUvCZoHXwH3G249kPsJ3Pj542ApYJdMzc2aa3A8',
+      },
+    ],
+  },
 }

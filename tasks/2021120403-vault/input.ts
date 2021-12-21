@@ -68,4 +68,19 @@ export default {
     ],
     whitelistedStrategies: [],
   },
+  polygon: {
+    UniswapConnector,
+    ChainLinkPriceOracle,
+    maxSlippage: fp(0.2), // 20%
+    protocolFee: fp(0), // 0%
+    whitelistedTokens: [
+      '0x1BFD67037B42Cf73acF2047067bd4F2C47D9BfD6', // WBTC
+      '0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619', // WETH
+      '0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063', // DAI
+      '0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174', // USDC
+      '0xc2132D05D31c914a87C6611C10748AEb04B58e8F', // USDT
+      '0x2e1AD108fF1D8C782fcBbB89AAd783aC49586756', // TUSD
+    ],
+    whitelistedStrategies: [],
+  },
 }

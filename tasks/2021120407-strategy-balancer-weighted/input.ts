@@ -40,4 +40,17 @@ export default {
       },
     ],
   },
+  polygon: {
+    Vault,
+    balancerVault: '0xBA12222222228d8Ba445958a75a0704d566BF2C8',
+    strategies: [
+      {
+        name: 'WBTC',
+        token: '0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619',
+        poolId: '0xcf354603a9aebd2ff9f33e1b04246d8ea204ae9500020000000000000000005a',
+        slippage: fp(0.01),
+        metadata: 'ipfs:QmbDYoPZsgF3yPRSsuZDThjZJ2oe3Kp1n4i95Sry6YAFhZ',
+      },
+    ],
+  },
 }
