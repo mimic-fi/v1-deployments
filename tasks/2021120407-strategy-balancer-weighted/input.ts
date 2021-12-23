@@ -8,7 +8,7 @@ const Vault = new Task('2021120403-vault')
 export type BalancerWeightedStrategyDeployment = {
   Vault: string
   balancerVault: string
-  strategies: Array<{ name: string; token: string; poolId: string; slippage: BigNumberish; metadata: string | Metadata }>
+  strategies: Array<{ name: string; token: string; poolId: string; enteringToken: string; slippage: BigNumberish; metadata: string | Metadata }>
 }
 
 /* eslint-disable no-secrets/no-secrets */
@@ -46,8 +46,9 @@ export default {
     strategies: [
       {
         name: 'WBTC',
-        token: '0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619',
+        token: '0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174',
         poolId: '0xcf354603a9aebd2ff9f33e1b04246d8ea204ae9500020000000000000000005a',
+        enteringToken: '0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619',
         slippage: fp(0.01),
         metadata: 'ipfs:QmbDYoPZsgF3yPRSsuZDThjZJ2oe3Kp1n4i95Sry6YAFhZ',
       },
