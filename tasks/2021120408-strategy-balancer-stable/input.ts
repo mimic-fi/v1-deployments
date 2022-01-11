@@ -8,7 +8,7 @@ const Vault = new Task('2021120403-vault')
 export type BalancerStableStrategyDeployment = {
   Vault: string
   balancerVault: string
-  strategies: Array<{ name: string; token: string; poolId: string; slippage: BigNumberish; metadata: string | Metadata }>
+  strategies: Array<{ name: string; token: string; poolId: string; enteringToken: string; slippage: BigNumberish; metadata: string | Metadata }>
 }
 
 /* eslint-disable no-secrets/no-secrets */
@@ -62,6 +62,7 @@ export default {
         name: 'USDC',
         token: '0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174',
         poolId: '0x0d34e5dd4d8f043557145598e4e2dc286b35fd4f000000000000000000000068',
+        enteringToken: '0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174',
         slippage: fp(0.01),
         metadata: 'ipfs:QmWpmKtVUvCZoHXwH3G249kPsJ3Pj542ApYJdMzc2aa3A8',
       },
