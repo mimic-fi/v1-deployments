@@ -16,8 +16,8 @@ This repository contains all the official deployments that contributes to the Mi
 | [`2021120406-strategy-buy-and-hold`](./tasks/2021120406-strategy-buy-and-hold/output)           | Buy & Hold strategies        |
 | [`2021120407-strategy-balancer-weighted`](./tasks/2021120407-strategy-balancer-weighted/output) | Balancer weighted strategies |
 | [`2021120408-strategy-balancer-stable`](./tasks/2021120408-strategy-balancer-stable/output)     | Balancer stable strategies   |
-| [`2022012600-vault`](./tasks/2022012601-vault/output)                                           | Mimic Vault (v0.0.7)         |
-| [`2022012602-agreement-factory`](./tasks/2022012602-agreement-factory/output)                   | Agreements factory (v0.0.2)  |
+| [`2022012600-vault`](./tasks/2022012601-vault/output)                                           | Mimic Vault (v0.0.8)         |
+| [`2022012602-agreement-factory`](./tasks/2022012602-agreement-factory/output)                   | Agreements factory (v0.0.3)  |
 
 ## New deployments
 
