@@ -6,25 +6,9 @@ export type ChainLinkPriceOracleDeployment = {
 /* eslint-disable no-secrets/no-secrets */
 
 export default {
-  localhost: {
-    tokens: [
-      '0x0000000000000000000000000000000000000001', // DAI
-      '0x0000000000000000000000000000000000000002', // USDC
-    ],
-    ethPriceFeeds: [
-      '0x1000000000000000000000000000000000000000', // DAI/ETH
-      '0x2000000000000000000000000000000000000000', // USDC/ETH
-    ],
-  },
   rinkeby: {
-    tokens: [
-      '0x5592ec0cfb4dbc12d3ab100b257153436a1f0fea', // DAI (compound)
-      '0x4dbcdf9b62e891a7cec5a2568c3f4faf9e8abe2b', // USDC (compound)
-    ],
-    ethPriceFeeds: [
-      '0x74825DbC8BF76CC4e9494d0ecB210f676Efa001D', // DAI/ETH
-      '0xdCA36F27cbC4E38aE16C4E9f99D39b42337F6dcf', // USDC/ETH
-    ],
+    tokens: [],
+    ethPriceFeeds: [],
   },
   kovan: {
     tokens: [
@@ -74,6 +58,8 @@ export default {
       '0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174', // USDC
       '0xc2132D05D31c914a87C6611C10748AEb04B58e8F', // USDT
       '0x2e1AD108fF1D8C782fcBbB89AAd783aC49586756', // TUSD
+      '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270', // WMATIC
+      '0x9a71012B13CA4d3D0Cdc72A177DF3ef03b0E76A3', // BAL
     ],
     ethPriceFeeds: [
       '0xA338e0492B2F944E9F8C0653D3AD1484f2657a37', // WBTC
@@ -82,6 +68,8 @@ export default {
       '0xefb7e6be8356cCc6827799B6A7348eE674A80EaE', // USDC
       '0xf9d5AAC6E5572AEFa6bd64108ff86a222F69B64d', // USDT
       '0xf9d5AAC6E5572AEFa6bd64108ff86a222F69B64d', // TUSD (USDT)
+      '0x327e23A4855b6F663a28c5161541d69Af8973302', // WMATIC
+      '0x03CD157746c61F44597dD54C6f6702105258C722', // BAL
     ],
   },
 }

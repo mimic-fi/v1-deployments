@@ -17,14 +17,6 @@ export type VaultDeployment = {
 /* eslint-disable no-secrets/no-secrets */
 
 export default {
-  localhost: {
-    UniswapConnector,
-    ChainLinkPriceOracle,
-    maxSlippage: fp(0.2), // 20%
-    protocolFee: fp(0.0002), // 0.02%
-    whitelistedTokens: [],
-    whitelistedStrategies: [],
-  },
   rinkeby: {
     UniswapConnector,
     ChainLinkPriceOracle,

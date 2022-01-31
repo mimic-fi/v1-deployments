@@ -146,10 +146,10 @@ export default class Task {
     return this._parseRawInput(this.rawInput())
   }
 
-  output({ ensure = true, network }: { ensure?: boolean; network?: Network } = {}): Output {
+  output({ ensure = true, network, outputFile }: { ensure?: boolean; network?: Network; outputFile?: string } = {}): Output {
     if (network) this.network = network
     const taskOutputDir = this._dirAt(this.dir(), 'output', ensure)
-    const taskOutputFile = this._fileAt(taskOutputDir, this.outputFile, ensure)
+    const taskOutputFile = this._fileAt(taskOutputDir, outputFile || this.outputFile, ensure)
     return this._read(taskOutputFile)
   }
 
@@ -178,7 +178,7 @@ export default class Task {
       else if (typeof item !== 'object') input[key] = item
       else {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const output: Output | any = this._isTask(item) ? (item as Task).output({ network: this.network }) : item
+        const output: Output | any = this._isTask(item) ? (item as Task).output({ network: this.network, outputFile: this.outputFile }) : item
         input[key] = output[key] ? output[key] : output
       }
       return input

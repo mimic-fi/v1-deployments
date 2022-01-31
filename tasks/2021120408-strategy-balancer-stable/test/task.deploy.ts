@@ -4,7 +4,7 @@ import hre from 'hardhat'
 import Task from '../../../src/task'
 
 describe('BalancerStableStrategy', function () {
-  const task = Task.fromHRE('2021090906-strategy-balancerstable', hre)
+  const task = Task.fromHRE('2021090906-strategy-balancer-stable', hre)
 
   it('has a vault reference', async () => {
     const input = task.input()
