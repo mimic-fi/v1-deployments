@@ -8,8 +8,8 @@ This repository contains all the official deployments that contributes to the Mi
 
 | ID                                                                                              | Component                    | Version |
 | ----------------------------------------------------------------------------------------------- | ---------------------------- | ------- |
-| [`2021120401-uniswap-connector`](./tasks/2021120401-uniswap-connector/output)                   | Uniswap V2 connector         |  0.0.1  |
-| [`2021120402-chain-link-price-oracle`](./tasks/2021120402-chain-link-price-oracle/output)       | Chainlink V3 price oracle    |  0.0.1  |
+| [`2021120401-uniswap-connector`](./tasks/2021120401-uniswap-connector/output)                   | Uniswap V2 connector         |  0.0.4  |
+| [`2021120402-chain-link-price-oracle`](./tasks/2021120402-chain-link-price-oracle/output)       | Chainlink V3 price oracle    |  0.0.4  |
 | [`2021120403-vault`](./tasks/2021120403-vault/output)                                           | Mimic Vault                  |  0.0.6  |
 | [`2021120404-agreement-factory`](./tasks/2021120404-agreement-factory/output)                   | Agreements factory           |  0.0.1  |
 | [`2021120405-strategy-compound`](./tasks/2021120405-strategy-compound/output)                   | Compound strategies          |  0.0.1  |
