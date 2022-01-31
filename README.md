@@ -6,18 +6,20 @@ This repository contains all the official deployments that contributes to the Mi
 
 ## Records
 
-| ID                                                                                              | Component                    |
-| ----------------------------------------------------------------------------------------------- | ---------------------------- |
-| [`2021120401-uniswap-connector`](./tasks/2021120401-uniswap-connector/output)                   | Uniswap V2 connector         |
-| [`2021120402-chain-link-price-oracle`](./tasks/2021120402-chain-link-price-oracle/output)       | Chainlink V3 price oracle    |
-| [`2021120403-vault`](./tasks/2021120403-vault/output)                                           | Mimic Vault (v0.0.6)         |
-| [`2021120404-agreement-factory`](./tasks/2021120404-agreement-factory/output)                   | Agreements factory (v0.0.1)  |
-| [`2021120405-strategy-compound`](./tasks/2021120405-strategy-compound/output)                   | Compound strategies          |
-| [`2021120406-strategy-buy-and-hold`](./tasks/2021120406-strategy-buy-and-hold/output)           | Buy & Hold strategies        |
-| [`2021120407-strategy-balancer-weighted`](./tasks/2021120407-strategy-balancer-weighted/output) | Balancer weighted strategies |
-| [`2021120408-strategy-balancer-stable`](./tasks/2021120408-strategy-balancer-stable/output)     | Balancer stable strategies   |
-| [`2022012600-vault`](./tasks/2022012601-vault/output)                                           | Mimic Vault (v0.0.8)         |
-| [`2022012602-agreement-factory`](./tasks/2022012602-agreement-factory/output)                   | Agreements factory (v0.0.3)  |
+| ID                                                                                              | Component                    | Version |
+| ----------------------------------------------------------------------------------------------- | ---------------------------- | ------- |
+| [`2021120401-uniswap-connector`](./tasks/2021120401-uniswap-connector/output)                   | Uniswap V2 connector         |  0.0.1  |
+| [`2021120402-chain-link-price-oracle`](./tasks/2021120402-chain-link-price-oracle/output)       | Chainlink V3 price oracle    |  0.0.1  |
+| [`2021120403-vault`](./tasks/2021120403-vault/output)                                           | Mimic Vault                  |  0.0.6  |
+| [`2021120404-agreement-factory`](./tasks/2021120404-agreement-factory/output)                   | Agreements factory           |  0.0.1  |
+| [`2021120405-strategy-compound`](./tasks/2021120405-strategy-compound/output)                   | Compound strategies          |  0.0.1  |
+| [`2021120406-strategy-buy-and-hold`](./tasks/2021120406-strategy-buy-and-hold/output)           | Buy & Hold strategies        |  0.0.1  |
+| [`2021120407-strategy-balancer-weighted`](./tasks/2021120407-strategy-balancer-weighted/output) | Balancer weighted strategies |  0.0.1  |
+| [`2021120408-strategy-balancer-stable`](./tasks/2021120408-strategy-balancer-stable/output)     | Balancer stable strategies   |  0.0.1  |
+| [`2022013100-vault`](./tasks/2022013101-vault/output)                                           | Mimic Vault                  |  0.0.9  |
+| [`2022013102-agreement-factory`](./tasks/2022013102-agreement-factory/output)                   | Agreements factory           |  0.0.4  |
+| [`2021123103-strategy-balancer-weighted`](./tasks/2021123103-strategy-balancer-weighted/output) | Balancer weighted strategies |  0.0.2  |
+| [`2021123104-strategy-balancer-stable`](./tasks/2021123104-strategy-balancer-stable/output)     | Balancer stable strategies   |  0.0.2  |
 
 ## New deployments
 
