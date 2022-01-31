@@ -3,7 +3,7 @@ import { BigNumberish, fp } from '@mimic-fi/v1-helpers'
 import Task from '../../src/task'
 import { Metadata } from '../../src/types'
 
-const Vault = new Task('2021120403-vault')
+const Vault = new Task('2022013101-vault')
 
 export type BalancerWeightedStrategyDeployment = {
   Vault: string
