@@ -1,4 +1,4 @@
-import { assertEvent } from '@mimic-fi/v1-helpers'
+import { assertEvent, getSigner } from '@mimic-fi/v1-helpers'
 
 import logger from '../../src/logger'
 import Task from '../../src/task'
@@ -7,6 +7,8 @@ import { BalancerStableStrategyDeployment } from './input'
 
 export default async (task: Task, { force, from }: TaskRunOptions = {}): Promise<void> => {
   const input = task.input() as BalancerStableStrategyDeployment
+  if (!task.isTest && !from) from = await getSigner(input.from)
+
   const factory = await task.deployAndVerify('BalancerStableStrategyFactory', [input.Vault, input.balancerVault], from, force, 'factory')
 
   const output = task.output()

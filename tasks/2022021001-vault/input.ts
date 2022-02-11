@@ -6,6 +6,7 @@ const UniswapConnector = new Task('2021120401-uniswap-connector')
 const ChainLinkPriceOracle = new Task('2021120402-chain-link-price-oracle')
 
 export type VaultDeployment = {
+  from: string
   admin: string
   maxSlippage: BigNumberish
   protocolFee: BigNumberish
@@ -17,10 +18,12 @@ export type VaultDeployment = {
 
 /* eslint-disable no-secrets/no-secrets */
 
+const from = '0xDB5AC6fE9fc1ca155154da68fC63e0D829827db5'
 const admin = '0x4ac53dE3a246FeC78C9F278F937550e143e55C06'
 
 export default {
   mainnet: {
+    from,
     admin,
     UniswapConnector,
     ChainLinkPriceOracle,
@@ -36,6 +39,7 @@ export default {
     whitelistedStrategies: [],
   },
   polygon: {
+    from,
     admin,
     UniswapConnector,
     ChainLinkPriceOracle,
@@ -54,6 +58,7 @@ export default {
     whitelistedStrategies: [],
   },
   kovan: {
+    from,
     admin,
     UniswapConnector,
     ChainLinkPriceOracle,
@@ -72,6 +77,7 @@ export default {
     whitelistedStrategies: [],
   },
   rinkeby: {
+    from,
     admin,
     UniswapConnector,
     ChainLinkPriceOracle,

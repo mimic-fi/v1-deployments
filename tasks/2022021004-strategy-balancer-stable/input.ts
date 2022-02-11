@@ -6,6 +6,7 @@ import { Metadata } from '../../src/types'
 const Vault = new Task('2022021001-vault')
 
 export type BalancerStableStrategyDeployment = {
+  from: string
   Vault: string
   balancerVault: string
   strategies: Array<{ name: string; token: string; poolId: string; enteringToken: string; slippage: BigNumberish; metadata: string | Metadata }>
@@ -13,8 +14,11 @@ export type BalancerStableStrategyDeployment = {
 
 /* eslint-disable no-secrets/no-secrets */
 
+const from = '0x9Fcebb9181df7e89D614C1ef95C017Aa56Ee49fa'
+
 export default {
   polygon: {
+    from,
     Vault,
     balancerVault: '0xBA12222222228d8Ba445958a75a0704d566BF2C8',
     strategies: [
