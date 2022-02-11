@@ -23,9 +23,9 @@ export default {
     balancerVault: '0xBA12222222228d8Ba445958a75a0704d566BF2C8',
     strategies: [
       {
-        name: 'STABAL3',
+        name: 'USDC/USDT/DAI/MAI',
         token: '0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174', // USDC
-        poolId: '0x0d34e5dd4d8f043557145598e4e2dc286b35fd4f000000000000000000000068',
+        poolId: '0x06df3b2bbb68adc8b0e302443692037ed9f91b42000000000000000000000012',
         slippage: fp(0.01),
         metadata: '',
       },
