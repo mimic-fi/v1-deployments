@@ -16,10 +16,10 @@ This repository contains all the official deployments that contributes to the Mi
 | [`2021120406-strategy-buy-and-hold`](./tasks/2021120406-strategy-buy-and-hold/output)           | Buy & Hold strategies        |  0.0.1  |
 | [`2021120407-strategy-balancer-weighted`](./tasks/2021120407-strategy-balancer-weighted/output) | Balancer weighted strategies |  0.0.1  |
 | [`2021120408-strategy-balancer-stable`](./tasks/2021120408-strategy-balancer-stable/output)     | Balancer stable strategies   |  0.0.1  |
-| [`2022013100-vault`](./tasks/2022013101-vault/output)                                           | Mimic Vault                  |  0.0.9  |
-| [`2022013102-agreement-factory`](./tasks/2022013102-agreement-factory/output)                   | Agreements factory           |  0.0.4  |
-| [`2021123103-strategy-balancer-weighted`](./tasks/2021123103-strategy-balancer-weighted/output) | Balancer weighted strategies |  0.0.2  |
-| [`2021123104-strategy-balancer-stable`](./tasks/2021123104-strategy-balancer-stable/output)     | Balancer stable strategies   |  0.0.2  |
+| [`2022021001-vault`](./tasks/2022021001-vault/output)                                           | Mimic Vault                  |  0.0.10 |
+| [`2022021002-agreement-factory`](./tasks/2022021002-agreement-factory/output)                   | Agreements factory           |  0.0.5  |
+| [`2022021003-strategy-balancer-weighted`](./tasks/2022021003-strategy-balancer-weighted/output) | Balancer weighted strategies |  0.0.2  |
+| [`2022021004-strategy-balancer-stable`](./tasks/2022021004-strategy-balancer-stable/output)     | Balancer stable strategies   |  0.0.2  |
 
 ## New deployments
 

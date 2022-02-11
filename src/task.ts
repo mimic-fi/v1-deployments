@@ -38,6 +38,10 @@ export default class Task {
     this._verifier = verifier
   }
 
+  get isTest(): boolean {
+    return this._outputFile === 'test'
+  }
+
   get outputFile(): string {
     return `${this._outputFile || this.network}.json`
   }
@@ -46,7 +50,7 @@ export default class Task {
     this._outputFile = file
   }
 
-  get network(): string {
+  get network(): Network {
     if (!this._network) throw Error('A network must be specified to define a task')
     return this._network
   }
@@ -70,7 +74,7 @@ export default class Task {
     const artifact = this.artifact(name)
     const instance = await deploy({ abi: artifact.abi, bytecode: artifact.evm.bytecode.object }, args, from)
     logger.success(`Deployed ${name} at ${instance.address}`)
-    return instance
+    return from ? instance.connect(from) : instance
   }
 
   async verify(name: string, address: string, constructorArguments: unknown): Promise<void> {
@@ -93,7 +97,8 @@ export default class Task {
     } else {
       logger.info(`${name} already deployed at ${output[key]}`)
       await this.verify(name, output[key], args)
-      return this.instanceAt(name, output[key])
+      const instance = await this.instanceAt(name, output[key])
+      return from ? instance.connect(from) : instance
     }
   }
 
