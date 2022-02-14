@@ -23,14 +23,14 @@ export default {
     lendingPool: '',
     strategies: [
       {
-        name: 'AAVE USDC',
+        name: 'aUSDC',
         token: '0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174', // USDC
         aToken: '0x1a13F4Ca1d028320A707D99520AbFefca3998b7F',
         slippage: fp(0.01),
         metadata: '',
       },
       {
-        name: 'AAVE DAI',
+        name: 'aDAI',
         token: '0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063', // DAI
         aToken: '0x27F8D03b3a2196956ED754baDc28D73be8830A6e',
         slippage: fp(0.01),
