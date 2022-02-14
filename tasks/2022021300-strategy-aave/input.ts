@@ -20,7 +20,7 @@ export default {
   polygon: {
     from,
     Vault,
-    lendingPool: '',
+    lendingPool: '0x8dFf5E27EA6b7AC08EbFdf9eB090F32ee9a30fcf',
     strategies: [
       {
         name: 'aUSDC',
