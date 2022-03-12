@@ -17,6 +17,20 @@ export type BalancerWeightedStrategyDeployment = {
 const from = '0x9Fcebb9181df7e89D614C1ef95C017Aa56Ee49fa'
 
 export default {
+  mainnet: {
+    from,
+    Vault,
+    balancerVault: '0xBA12222222228d8Ba445958a75a0704d566BF2C8',
+    strategies: [
+      {
+        name: 'WBTC/WETH',
+        token: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', // WETH
+        poolId: '0xa6f548df93de924d73be7d25dc02554c6bd66db500020000000000000000000e',
+        slippage: fp(0.01),
+        metadata: '',
+      },
+    ],
+  },
   polygon: {
     from,
     Vault,
