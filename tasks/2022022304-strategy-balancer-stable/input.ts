@@ -17,6 +17,20 @@ export type BalancerStableStrategyDeployment = {
 const from = '0x9Fcebb9181df7e89D614C1ef95C017Aa56Ee49fa'
 
 export default {
+  mainnet: {
+    from,
+    Vault,
+    balancerVault: '0xBA12222222228d8Ba445958a75a0704d566BF2C8',
+    strategies: [
+      {
+        name: 'wstETH/WETH',
+        token: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', // WETH
+        poolId: '0x32296969ef14eb0c6d29669c550d4a0449130230000200000000000000000080',
+        slippage: fp(0.01),
+        metadata: '',
+      },
+    ],
+  },
   polygon: {
     from,
     Vault,
