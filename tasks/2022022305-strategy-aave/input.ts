@@ -14,7 +14,7 @@ export type AaveStrategyDeployment = {
 
 /* eslint-disable no-secrets/no-secrets */
 
-const from = '0x9Fcebb9181df7e89D614C1ef95C017Aa56Ee49fa'
+const from = '0xEf69641350c7C3cf8b19706A01f31362458d23FE'
 
 export default {
   polygon: {

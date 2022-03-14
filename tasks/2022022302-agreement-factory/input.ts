@@ -10,7 +10,7 @@ export type AgreementFactoryDeployment = {
 
 /* eslint-disable no-secrets/no-secrets */
 
-const from = '0xF8e8086738f074E8D4787522AC7e96Fb9F124e74'
+const from = '0xC1698109c75ee0b11470DCe249d3f490dd5f2A09'
 
 export default {
   mainnet: {
