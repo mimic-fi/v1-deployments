@@ -3,6 +3,7 @@ import EtherscanResponse, { delay, getVerificationStatus } from '@nomiclabs/hard
 import { EtherscanVerifyRequest, toCheckStatusRequest, toVerifyRequest } from '@nomiclabs/hardhat-etherscan/dist/src/etherscan/EtherscanVerifyContractRequest'
 import { EtherscanURLs, getEtherscanEndpoints, retrieveContractBytecode } from '@nomiclabs/hardhat-etherscan/dist/src/network/prober'
 import { Bytecode, ContractInformation, extractMatchingContractInformation } from '@nomiclabs/hardhat-etherscan/dist/src/solc/bytecode'
+import { getLibraryLinks, Libraries } from '@nomiclabs/hardhat-etherscan/dist/src/solc/libraries'
 import { getLongVersion } from '@nomiclabs/hardhat-etherscan/dist/src/solc/version'
 import { BuildInfo, CompilerInput, Network } from 'hardhat/types'
 import fetch, { Response } from 'node-fetch'
@@ -21,7 +22,7 @@ export default class Verifier {
     this.apiKey = _apiKey
   }
 
-  async call(task: Task, name: string, address: string, constructorArguments: unknown, intent = 1): Promise<string> {
+  async call(task: Task, name: string, address: string, constructorArguments: unknown, libraries: Libraries = {}, intent = 1): Promise<string> {
     const response = await this.verify(task, name, address, constructorArguments)
 
     if (response.isVerificationSuccess()) {
@@ -31,19 +32,22 @@ export default class Verifier {
     } else if (intent < MAX_VERIFICATION_INTENTS && response.isBytecodeMissingInNetworkError()) {
       logger.info(`Could not find deployed bytecode in network, retrying ${intent++}/${MAX_VERIFICATION_INTENTS}...`)
       delay(300)
-      return this.call(task, name, address, constructorArguments, intent++)
+      return this.call(task, name, address, constructorArguments, libraries, intent++)
     } else {
       throw new Error(`The contract verification failed. Reason: ${response.message}`)
     }
   }
 
-  private async verify(task: Task, name: string, address: string, args: unknown): Promise<EtherscanResponse> {
+  private async verify(task: Task, name: string, address: string, args: unknown, libraries: Libraries = {}): Promise<EtherscanResponse> {
     const deployedBytecodeHex = await retrieveContractBytecode(address, this.network.provider, this.network.name)
     const deployedBytecode = new Bytecode(deployedBytecodeHex)
     const buildInfo = await task.buildInfo(name)
     const sourceName = this.findContractSourceName(buildInfo, name)
     const contractInformation = await extractMatchingContractInformation(sourceName, name, buildInfo, deployedBytecode)
     if (!contractInformation) throw Error('Could not find a bytecode matching the requested contract')
+
+    const { libraryLinks } = await getLibraryLinks(contractInformation, libraries)
+    contractInformation.libraryLinks = libraryLinks
 
     const deployArgumentsEncoded = await encodeArguments(
       contractInformation.contract.abi,

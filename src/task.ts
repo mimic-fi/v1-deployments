@@ -1,12 +1,12 @@
-import { deploy, instanceAt } from '@mimic-fi/v1-helpers'
 import { SignerWithAddress } from '@nomiclabs/hardhat-ethers/signers'
 import { BigNumber, Contract } from 'ethers'
 import fs from 'fs'
 import { BuildInfo, CompilerOutputContract, HardhatRuntimeEnvironment } from 'hardhat/types'
 import path, { extname } from 'path'
 
+import { deploy, instanceAt } from './contracts'
 import logger from './logger'
-import { Artifact, Input, Network, NETWORKS, Output, Param, RawInputKeyValue, RawOutput, TaskRunOptions } from './types'
+import { Artifact, Input, Libraries, Network, NETWORKS, Output, Param, RawInputKeyValue, RawOutput, TaskRunOptions } from './types'
 import Verifier from './verifier'
 
 const TASKS_DIRECTORY = path.resolve(__dirname, '../tasks')
@@ -70,33 +70,33 @@ export default class Task {
     return this.instanceAt(name, address)
   }
 
-  async deploy(name: string, args: Array<Param> = [], from?: SignerWithAddress): Promise<Contract> {
-    const artifact = this.artifact(name)
-    const instance = await deploy({ abi: artifact.abi, bytecode: artifact.evm.bytecode.object }, args, from)
+  async deploy(name: string, args: Array<Param> = [], from?: SignerWithAddress, libs?: Libraries): Promise<Contract> {
+    const artifact = await this.artifact(name)
+    const instance = await deploy(artifact, args, from, libs)
     logger.success(`Deployed ${name} at ${instance.address}`)
     return from ? instance.connect(from) : instance
   }
 
-  async verify(name: string, address: string, constructorArguments: unknown): Promise<void> {
+  async verify(name: string, address: string, constructorArguments: unknown, libs?: Libraries): Promise<void> {
     try {
       if (!this._verifier) return logger.warn('Skipping contract verification, no verifier defined')
-      const url = await this._verifier.call(this, name, address, constructorArguments)
+      const url = await this._verifier.call(this, name, address, constructorArguments, libs)
       logger.success(`Verified contract ${name} at ${url}`)
     } catch (error) {
       logger.error(`Failed trying to verify ${name} at ${address}: ${error}`)
     }
   }
 
-  async deployAndVerify(name: string, args: Array<Param> = [], from?: SignerWithAddress, force?: boolean, key = name): Promise<Contract> {
+  async deployAndVerify(name: string, args: Array<Param> = [], from?: SignerWithAddress, force?: boolean, key = name, libs?: Libraries): Promise<Contract> {
     const output = this.output({ ensure: false })
     if (force || !output[key]) {
-      const instance = await this.deploy(name, args, from)
+      const instance = await this.deploy(name, args, from, libs)
       this.save({ [key]: instance })
-      await this.verify(name, instance.address, args)
+      await this.verify(name, instance.address, args, libs)
       return instance
     } else {
       logger.info(`${name} already deployed at ${output[key]}`)
-      await this.verify(name, output[key], args)
+      await this.verify(name, output[key], args, libs)
       const instance = await this.instanceAt(name, output[key])
       return from ? instance.connect(from) : instance
     }

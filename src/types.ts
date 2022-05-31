@@ -30,8 +30,6 @@ export type RawInputKeyValue = {
   [key: string]: NAry<Param> | Output | Task
 }
 
-export type RawInput = RawInputKeyValue | RawInputByNetwork
-
 export type Output = {
   [key: string]: string
 }
@@ -39,6 +37,8 @@ export type Output = {
 export type RawOutput = {
   [key: string]: string | Contract
 }
+
+export type Libraries = { [key: string]: string }
 
 export type Artifact = {
   abi: unknown[]
