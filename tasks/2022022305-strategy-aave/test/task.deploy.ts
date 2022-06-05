@@ -2,17 +2,24 @@ import { expect } from 'chai'
 import hre from 'hardhat'
 
 import Task from '../../../src/task'
+import { AaveStrategyDeployment } from '../input'
 
-describe('BalancerStableStrategy', function () {
+describe('AaveStrategy V1', function () {
   const task = Task.fromHRE('2022022305-strategy-aave', hre)
 
-  it('has a vault reference', async () => {
-    const input = task.input()
-    const output = task.output()
+  if (task.network === 'polygon') {
+    it('deployed an AaveStrategy as expected', async () => {
+      const input = task.input() as AaveStrategyDeployment
+      const output = task.output()
 
-    const aaveStrategy = await task.instanceAt('AaveStrategy', output.usdc)
-    expect(await aaveStrategy.getVault()).to.be.equal(input.Vault)
-    expect(await aaveStrategy.getToken()).to.be.equal(input.token)
-    expect(await aaveStrategy.getMetadataURI()).to.be.equal(input.metadata)
-  })
+      for (const strategyData of input.strategies) {
+        const strategy = await task.instanceAt('AaveStrategy', output[strategyData.name])
+        expect(await strategy.getVault()).to.be.equal(input.Vault)
+        expect(await strategy.getToken()).to.be.equal(strategyData.token)
+        expect(await strategy.getAToken()).to.be.equal(strategyData.aToken)
+        expect(await strategy.getSlippage()).to.be.equal(strategyData.slippage)
+        expect(await strategy.getMetadataURI()).to.be.equal(strategyData.metadata)
+      }
+    })
+  }
 })

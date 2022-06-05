@@ -2,22 +2,22 @@ import { expect } from 'chai'
 import hre from 'hardhat'
 
 import Task from '../../../src/task'
+import { BalancerStableStrategyDeployment } from '../input'
 
-describe('BalancerStableStrategy', function () {
-  const task = Task.fromHRE('2021090906-strategy-balancer-stable', hre)
+describe('BalancerStableStrategy V0', function () {
+  const task = Task.fromHRE('2021120408-strategy-balancer-stable', hre)
 
-  it('has a vault reference', async () => {
-    const input = task.input()
+  it('deployed a BalancerStableStrategy as expected', async () => {
+    const input = task.input() as BalancerStableStrategyDeployment
     const output = task.output()
 
-    const daiStrategy = await task.instanceAt('BalancerStableStrategy', output.dai)
-    expect(await daiStrategy.getVault()).to.be.equal(input.Vault)
-    expect(await daiStrategy.getToken()).to.be.equal(input.token)
-    expect(await daiStrategy.getMetadataURI()).to.be.equal(input.metadata)
-
-    const usdcStrategy = await task.instanceAt('BalancerStableStrategy', output.usdc)
-    expect(await usdcStrategy.getVault()).to.be.equal(input.Vault)
-    expect(await usdcStrategy.getToken()).to.be.equal(input.token)
-    expect(await usdcStrategy.getMetadataURI()).to.be.equal(input.metadata)
+    for (const strategyData of input.strategies) {
+      const strategy = await task.instanceAt('BalancerStableStrategy', output[strategyData.name])
+      expect(await strategy.getVault()).to.be.equal(input.Vault)
+      expect(await strategy.getToken()).to.be.equal(strategyData.token)
+      expect(await strategy.getPoolId()).to.be.equal(strategyData.poolId)
+      expect(await strategy.getSlippage()).to.be.equal(strategyData.slippage)
+      expect(await strategy.getMetadataURI()).to.be.equal(strategyData.metadata)
+    }
   })
 })

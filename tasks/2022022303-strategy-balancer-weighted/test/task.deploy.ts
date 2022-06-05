@@ -2,17 +2,22 @@ import { expect } from 'chai'
 import hre from 'hardhat'
 
 import Task from '../../../src/task'
+import { BalancerWeightedStrategyDeployment } from '../input'
 
-describe('BalancerWeightedStrategy', function () {
+describe('BalancerWeightedStrategy V1', function () {
   const task = Task.fromHRE('2022022303-strategy-balancer-weighted', hre)
 
-  it('has a vault reference', async () => {
-    const input = task.input()
+  it('deployed a BalancerWeightedStrategy as expected', async () => {
+    const input = task.input() as BalancerWeightedStrategyDeployment
     const output = task.output()
 
-    const usdcStrategy = await task.instanceAt('BalancerWeightedStrategy', output.usdc)
-    expect(await usdcStrategy.getVault()).to.be.equal(input.Vault)
-    expect(await usdcStrategy.getToken()).to.be.equal(input.token)
-    expect(await usdcStrategy.getMetadataURI()).to.be.equal(input.metadata)
+    for (const strategyData of input.strategies) {
+      const strategy = await task.instanceAt('BalancerWeightedStrategy', output[strategyData.name])
+      expect(await strategy.getVault()).to.be.equal(input.Vault)
+      expect(await strategy.getToken()).to.be.equal(strategyData.token)
+      expect(await strategy.getPoolId()).to.be.equal(strategyData.poolId)
+      expect(await strategy.getSlippage()).to.be.equal(strategyData.slippage)
+      expect(await strategy.getMetadataURI()).to.be.equal(strategyData.metadata)
+    }
   })
 })

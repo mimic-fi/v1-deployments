@@ -62,7 +62,7 @@ export default {
         name: 'DAI',
         slippage: fp(0.05),
         token: '0x6B175474E89094C44Da98b954EedeAC495271d0F',
-        ctoken: '0x5d3a536e4d6dbd6114cc1ead35777bab948e3643',
+        ctoken: '0x5d3a536E4D6DbD6114cc1Ead35777bAB948E3643',
         metadata: 'ipfs:QmSbzUwqiNQuBefs2omKkCLi7eyv7RwnaJWEYrQ7brFRqr',
       },
     ],

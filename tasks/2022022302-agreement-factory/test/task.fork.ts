@@ -6,7 +6,7 @@ import hre from 'hardhat'
 
 import Task from '../../../src/task'
 
-describe('AgreementFactory', function () {
+describe('AgreementFactory V1', function () {
   let manager1: SignerWithAddress, manager2: SignerWithAddress, withdrawer1: SignerWithAddress, withdrawer2: SignerWithAddress, feeCollector: SignerWithAddress
   let agreement: Contract, factory: Contract, vault: Contract
 
@@ -24,7 +24,7 @@ describe('AgreementFactory', function () {
 
   before('load vault and tokens', async () => {
     const vaultTask = Task.forTest('2021120403-vault', getForkedNetwork(hre))
-    vault = await vaultTask.instanceAt('Vault', await factory.getVault())
+    vault = await vaultTask.instanceAt('Vault', await factory.vault())
   })
 
   it('deploy an agreement', async () => {
