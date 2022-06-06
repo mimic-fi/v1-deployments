@@ -85,9 +85,9 @@ export default {
     from,
     admin,
     ChainLinkPriceOracle,
-    uniswapV2: '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D',
-    uniswapV3: '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D',
-    balancerV2: '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D',
+    uniswapV2: '0xa5E0829CaCEd8fFDD4De3c43696c57F7D7A678ff',
+    uniswapV3: '0xE592427A0AEce92De3Edee1F18E0157C05861564',
+    balancerV2: '0xBA12222222228d8Ba445958a75a0704d566BF2C8',
     config: {},
   },
 }
