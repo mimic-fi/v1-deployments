@@ -18,4 +18,9 @@ export default {
     Vault,
     WETH: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
   },
+  polygon: {
+    from,
+    Vault,
+    WETH: '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270', // wMATIC
+  },
 }
