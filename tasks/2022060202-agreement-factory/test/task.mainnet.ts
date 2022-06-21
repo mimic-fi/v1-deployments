@@ -30,20 +30,22 @@ describe('AgreementFactory V2', function () {
   it('deploy an agreement', async () => {
     const name = 'agreement test'
     const depositFee = fp(0.01)
+    const withdrawFee = fp(0.005)
     const performanceFee = fp(0.02)
+    const maxSwapSlippage = fp(0.03)
     const managers = [manager1.address, manager2.address]
     const withdrawers = [withdrawer1.address, withdrawer2.address]
 
-    const tx = await factory.create(name, depositFee, performanceFee, feeCollector.address, managers, withdrawers, [], 0)
-    const event = await assertEvent(tx, 'AgreementCreated')
+    const tx = await factory.create(name, feeCollector.address, depositFee, withdrawFee, performanceFee, maxSwapSlippage, managers, withdrawers, [], 2, [], 2)
+    const event = await assertEvent(tx, 'AgreementCreated', { name })
 
-    agreement = await task.instanceAt('AgreementCreated', event.args.agreement)
-    expect(await factory.isAgreement(name)).to.be.true
+    agreement = await task.instanceAt('Agreement', event.args.agreement)
     expect(await factory.isAgreement(agreement.address)).to.be.true
 
-    expect(await agreement.name()).to.equal(name)
-    expect(await agreement.vault()).to.equal(vault)
+    expect(await agreement.weth()).to.equal(task.input().WETH)
+    expect(await agreement.vault()).to.equal(vault.address)
     expect(await agreement.depositFee()).to.equal(depositFee)
+    expect(await agreement.withdrawFee()).to.equal(withdrawFee)
     expect(await agreement.performanceFee()).to.equal(performanceFee)
     expect(await agreement.feeCollector()).to.equal(feeCollector.address)
     expect(await agreement.isManager(manager1.address)).to.be.true
@@ -51,5 +53,6 @@ describe('AgreementFactory V2', function () {
     expect(await agreement.isWithdrawer(withdrawer1.address)).to.be.true
     expect(await agreement.isWithdrawer(withdrawer2.address)).to.be.true
     expect(await agreement.isStrategyAllowed(ZERO_ADDRESS)).to.be.true
+    expect(await agreement.isTokenAllowed(ZERO_ADDRESS)).to.be.true
   })
 })

@@ -19,7 +19,6 @@ describe('SwapConnector V1', function () {
   it('deploys a SwapConnector as expected', async () => {
     const input = task.input() as SwapConnectorDeployment
 
-    expect(await swapConnector.owner()).to.be.equal(input.admin)
     expect(await swapConnector.priceOracle()).to.be.equal(input.ChainLinkPriceOracle)
   })
 })

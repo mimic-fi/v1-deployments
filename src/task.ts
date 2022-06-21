@@ -183,7 +183,7 @@ export default class Task {
       else if (typeof item !== 'object') input[key] = item
       else {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const output: Output | any = this._isTask(item) ? (item as Task).output({ network: this.network, outputFile: this.outputFile }) : item
+        const output: Output | any = this._isTask(item) ? (item as Task).output({ network: this.network }) : item
         input[key] = output[key] ? output[key] : output
       }
       return input
