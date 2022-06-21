@@ -42,6 +42,8 @@ export default {
       '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48', // USDC
       '0xdAC17F958D2ee523a2206206994597C13D831ec7', // USDT
       '0xc00e94cb662c3520282e6f5717214004a7f26888', // COMP
+      '0xba100000625a3754423978a60c9317c58a424e3d', // BAL
+      '0x5A98FcBEA516Cf06857215779Fd812CA3beF1B32', // LDO
     ],
     ethPriceFeeds: [
       '0xdeb288F737066589598e9214E782fa5A8eD689e8', // WBTC
@@ -50,6 +52,8 @@ export default {
       '0x986b5E1e1755e3C2440e960477f25201B0a8bbD4', // USDC
       '0xEe9F2375b4bdF6387aa8265dD4FB8F16512A1d46', // USDT
       '0x1b39ee86ec5979ba5c322b826b3ecb8c79991699', // COMP
+      '0xc1438aa3823a6ba0c159cfa8d98df5a994ba120b', // BAL
+      '0x4e844125952d32acdf339be976c98e22f6f318db', // LDO
     ],
   },
   polygon: {
