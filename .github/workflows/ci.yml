@@ -67,6 +67,8 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
       - name: Test
         run: yarn test
+      - name: Test mainnet fork
+        run: yarn test:mainnet
 
 env:
   CI: true

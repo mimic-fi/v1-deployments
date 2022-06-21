@@ -545,10 +545,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.0.tgz#87de7af9c231826fdd68ac7258f77c429e0e5fcf"
   integrity sha512-wdppn25U8z/2yiaT6YGquE6X8sSv7hNMWSXYSSU1jGv/yd6XqjXgTDJ8KP4NgjTXfJ3GbRjeeb8RTV7a/VpM+w==
 
-"@mimic-fi/v1-helpers@0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@mimic-fi/v1-helpers/-/v1-helpers-0.0.4.tgz#44287c0994edc12a4895433861f16be0742ca4c8"
-  integrity sha512-rDwfp8ePPCdcPZPD8nSm8fyl2ynI3hBYAbvL9u+JVuVL7oDnqOy4ORtyazWHVVkljDLssDon5yJpcZzIFihvww==
+"@mimic-fi/v1-helpers@0.0.10":
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/@mimic-fi/v1-helpers/-/v1-helpers-0.0.10.tgz#cb7d3eab2b404e17b9a8b9ce407abe05735d8b3b"
+  integrity sha512-mGbwLMe2EgKdCoW8Y73EFR9h4NuS5IgKVdkuyk5oR46KyTsAoVOLu7lhm/jdA5xjoLj24DeIQR/56HH/n4taow==
   dependencies:
     "@nomiclabs/hardhat-ethers" "^2.0.2"
     decimal.js "^10.3.1"

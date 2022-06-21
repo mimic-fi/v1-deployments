@@ -15,7 +15,7 @@
     "build": "rm -rf dist && tsc",
     "test": "hardhat test ./tasks/**/test/*.ts",
     "test:deployed": "yarn test --network mainnet",
-    "test:mainnet": "yarn test --fork mainnet --block-number 12731159",
+    "test:mainnet": "yarn test --fork mainnet --block-number 15002000",
     "prepublish": "yarn build"
   },
   "dependencies": {
