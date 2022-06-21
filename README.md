@@ -21,9 +21,16 @@ This repository contains all the official deployments that contributes to the Mi
 | [`2022022303-strategy-balancer-weighted`](./tasks/2022022303-strategy-balancer-weighted/output) | Balancer weighted strategies | 0.0.2   |
 | [`2022022304-strategy-balancer-stable`](./tasks/2022022304-strategy-balancer-stable/output)     | Balancer stable strategies   | 0.0.2   |
 | [`2022022305-strategy-aave`](./tasks/2022022305-strategy-aave/output)                           | AAVE strategies              | 0.0.1   |
-| [`2022060201-swap-connector`](./tasks/2022060201-swap-connector/output)                         | Swap connector               | 0.0.2   |
+| [`2022060201-swap-connector`](./tasks/2022060201-swap-connector/output)                         | Swap connector V1            | 0.0.2   |
 | [`2022060202-agreement-factory`](./tasks/2022060202-agreement-factory/output)                   | Agreement Factory V2         | 0.0.10  |
 | [`2022060203-strategy-aave`](./tasks/2022060203-strategy-aave/output)                           | AAVE strategies              | 0.0.2   |
+| [`2022060901-strategy-compound`](./tasks/2022060901-strategy-compound/output)                   | Compound strategies          | 0.0.3   |
+| [`2022060902-strategy-balancer-weighted`](./tasks/2022060902-strategy-balancer-weighted/output) | Balancer weighted strategies | 0.0.3   |
+| [`2022060903-strategy-balancer-stable`](./tasks/2022060903-strategy-balancer-stable/output)     | Balancer stable strategies   | 0.0.3   |
+| [`2022060904-strategy-balancer-boosted`](./tasks/2022060904-strategy-balancer-boosted/output)   | Balancer boosted strategies  | 0.0.1   |
+| [`2022062101-agreement-factory`](./tasks/2022062101-agreement-factory/output)                   | Agreement Factory V3         | 0.0.11  |
+| [`2022062102-swap-connector`](./tasks/2022062102-swap-connector/output)                         | Swap connector V2            | 0.0.3   |
+
 
 ## New deployments
 
