@@ -41,29 +41,23 @@ export default {
     uniswapV3: '0xE592427A0AEce92De3Edee1F18E0157C05861564',
     balancerV2: '0xBA12222222228d8Ba445958a75a0704d566BF2C8',
     config: {
-      balancerV2: [
+      balancerV2: [],
+      uniswapV3: [
         {
           tokens: [
             '0xba100000625a3754423978a60c9317c58a424e3d', // BAL
             '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', // WETH
             '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48', // USDC
           ],
-          poolIds: [
-            '0x5c6ee304399dbdb9c8ef030ab642b10820db8f56000200000000000000000014', // BAL-WETH
-            '0x96646936b91d6b9d7d0c47c496afbf3d6ec7b6f8000200000000000000000019', // WETH-USDC
-          ],
+          fees: [3000, 3000], // 0.3%, 0.3%
         },
         {
           tokens: [
             '0xba100000625a3754423978a60c9317c58a424e3d', // BAL
             '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', // WETH
           ],
-          poolIds: [
-            '0x5c6ee304399dbdb9c8ef030ab642b10820db8f56000200000000000000000014', // BAL-WETH
-          ],
+          fees: [3000], // 0.3%
         },
-      ],
-      uniswapV3: [
         {
           tokens: [
             '0x5A98FcBEA516Cf06857215779Fd812CA3beF1B32', // LDO
