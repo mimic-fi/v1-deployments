@@ -105,7 +105,7 @@ export default {
             '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270', // WMATIC
           ],
           poolIds: [
-            '0xba07d63875d0c2319d43cbb8a897f89bdafd7e87000100000000000000000077', // WMATIC/LINK/DAI/BAL/1INCH/ENS/AAVE/GTC
+            '0x0297e37f1873d2dab4487aa67cd56b58e2f27875000100000000000000000002', // WMATIC/USDC/WETH/BAL
           ],
         },
       ],
