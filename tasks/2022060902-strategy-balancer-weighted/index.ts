@@ -23,6 +23,7 @@ export default async (task: Task, { force, from }: TaskRunOptions = {}): Promise
       const event = await assertEvent(tx, 'StrategyCreated')
       const instance = await task.instanceAt('BalancerWeightedStrategy', event.args.strategy)
       logger.success(`Deployed strategy ${strategy.name} at ${instance.address}`)
+      await instance.connect(from).transferOwnership(input.admin)
       task.save({ [strategy.name]: instance.address })
       await task.verify('BalancerWeightedStrategy', instance.address, args)
     }
