@@ -101,7 +101,7 @@ jobs:
         if: failure()
         with:
           severity: error
-          details: Benchmark failed!
+          details: Test failed!
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
       - name: Test cancelled
         uses: rjstone/discord-webhook-notify@v1
