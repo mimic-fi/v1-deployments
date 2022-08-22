@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://mimic.fi"><img src="https://www.mimic.fi/static/media/navbar-logo.d79d70dab1c7bd176b11b74829ed33e7.svg" alt="Mimic Finance" width="200"></a> 
+  <a href="https://mimic.fi"><img src="https://www.mimic.fi/logo.png" alt="Mimic Finance" width="200"></a> 
 </h1>
 
 <h4 align="center">A DeFi automation platform</h4>
